@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CLINIQUE" Class="DCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DJOUMDJEU-PC\SERVER2008;Initial Catalog=CLINIQUE;Integrated Security=True" SettingsObjectName="CLINIQUE.My.MySettings" SettingsPropertyName="CLINIQUEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VISITES" Member="VISITEs">
+    <Type Name="VISITE">
+      <Column Name="NUMERO_AUTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMERO_DOSSIER" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CODE_PERS" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CODE_PRES" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_VISITE" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="DOSSIER_MEDICALE_VISITE" Member="DOSSIER_MEDICALE" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="DOSSIER_MEDICALE" IsForeignKey="true" />
+      <Association Name="PERSONNEL_SOIGNANT_VISITE" Member="PERSONNEL_SOIGNANT" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="PERSONNEL_SOIGNANT" IsForeignKey="true" />
+      <Association Name="ACTE_PRESTATION_VISITE" Member="ACTE_PRESTATION" ThisKey="CODE_PRES" OtherKey="CODE_PRES" Type="ACTE_PRESTATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ASSURANCE" Member="ASSURANCEs">
+    <Type Name="ASSURANCE">
+      <Column Name="CODE_ASS" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOM_ASS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="BP_ASS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TELEPHONE_ASS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TELEX_ASS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="FAX_ASS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="ASSURANCE_ASSURANCE_SOCIETE" Member="ASSURANCE_SOCIETEs" ThisKey="CODE_ASS" OtherKey="CODE_ASS" Type="ASSURANCE_SOCIETE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ASSURANCE_SOCIETE" Member="ASSURANCE_SOCIETEs">
+    <Type Name="ASSURANCE_SOCIETE">
+      <Column Name="ID_AUTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_ASS" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CODE" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ASSURANCE_ASSURANCE_SOCIETE" Member="ASSURANCE" ThisKey="CODE_ASS" OtherKey="CODE_ASS" Type="ASSURANCE" IsForeignKey="true" />
+      <Association Name="DETAIL_ASSURANCE_SOC_ASSURANCE_SOCIETE" Member="DETAIL_ASSURANCE_SOC" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="DETAIL_ASSURANCE_SOC" IsForeignKey="true" />
+      <Association Name="SOCIETE_ASSURANCE_SOCIETE" Member="SOCIETE" ThisKey="CODE" OtherKey="CODE" Type="SOCIETE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATEGORIE_SOCIETE" Member="CATEGORIE_SOCIETEs">
+    <Type Name="CATEGORIE_SOCIETE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="INTITULE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="DESIG_CAT" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="CATEGORIE_SOCIETE_DETAIL_ASSURANCE_SOC" Member="DETAIL_ASSURANCE_SOCs" ThisKey="ID" OtherKey="ID" Type="DETAIL_ASSURANCE_SOC" />
+      <Association Name="SOCIETE_CATEGORIE_SOCIETE" Member="SOCIETE" ThisKey="CODE" OtherKey="CODE" Type="SOCIETE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONSOMMER" Member="CONSOMMERs">
+    <Type Name="CONSOMMER">
+      <Column Name="CODE_PAT" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE_MEC" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DATE_CONSO" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="QTE_CONSO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PATIENT_CONSOMMER" Member="PATIENT" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="PATIENT" IsForeignKey="true" />
+      <Association Name="PHARMACIE_CONSOMMER" Member="PHARMACIE" ThisKey="CODE_MEC" OtherKey="CODE_MEC" Type="PHARMACIE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONSULTATION" Member="CONSULTATIONs">
+    <Type Name="CONSULTATION">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_PAT" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CODE_PERS" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_CONSULT" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE_CONSULT" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="FRAIX_CONSULT" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="PATIENT_CONSULTATION" Member="PATIENT" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="PATIENT" IsForeignKey="true" />
+      <Association Name="PERSONNEL_SOIGNANT_CONSULTATION" Member="PERSONNEL_SOIGNANT" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="PERSONNEL_SOIGNANT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DEPOT_MEDICAMENT" Member="DEPOT_MEDICAMENTs">
+    <Type Name="DEPOT_MEDICAMENT">
+      <Column Name="ID_AUTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="INTITULE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="ADRESSE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="REGIONS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PAYS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="REPONSABLE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEPHONE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Member="DESIGNATION" Type="System.String" CanBeNull="false" />
+      <Association Name="DEPOT_MEDICAMENT_ENTETE_STOCK" Member="ENTETE_STOCKs" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="ENTETE_STOCK" />
+      <Association Name="DEPOT_MEDICAMENT_STOCK_MEDICAMENT" Member="STOCK_MEDICAMENTs" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="STOCK_MEDICAMENT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DETAIL_ASSURANCE_SOC" Member="DETAIL_ASSURANCE_SOCs">
+    <Type Name="DETAIL_ASSURANCE_SOC">
+      <Column Name="ID_AUTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_PRES" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRIX_PRATIQUER" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="DETAIL_ASSURANCE_SOC_ASSURANCE_SOCIETE" Member="ASSURANCE_SOCIETE" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="ASSURANCE_SOCIETE" Cardinality="One" />
+      <Association Name="CATEGORIE_SOCIETE_DETAIL_ASSURANCE_SOC" Member="CATEGORIE_SOCIETE" ThisKey="ID" OtherKey="ID" Type="CATEGORIE_SOCIETE" IsForeignKey="true" />
+      <Association Name="ACTE_PRESTATION_DETAIL_ASSURANCE_SOC" Member="ACTE_PRESTATION" ThisKey="CODE_PRES" OtherKey="CODE_PRES" Type="ACTE_PRESTATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOSSIER_MEDICALE" Member="DOSSIER_MEDICALEs">
+    <Type Name="DOSSIER_MEDICALE">
+      <Column Name="NUMERO_DOSSIER" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_ORD" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CODE_PERS" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CODE_PAT" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ANNEE" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NUMEROREF" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Association Name="DOSSIER_MEDICALE_VISITE" Member="VISITEs" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="VISITE" />
+      <Association Name="DOSSIER_MEDICALE_HOSPITALISER" Member="HOSPITALISERs" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="HOSPITALISER" />
+      <Association Name="DOSSIER_MEDICALE_LABORATOIRE" Member="LABORATOIREs" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="LABORATOIRE" />
+      <Association Name="DOSSIER_MEDICALE_TRAITEMENT" Member="TRAITEMENTs" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="TRAITEMENT" />
+      <Association Name="ORDONANCE_DOSSIER_MEDICALE" Member="ORDONANCE" ThisKey="CODE_ORD" OtherKey="CODE_ORD" Type="ORDONANCE" IsForeignKey="true" />
+      <Association Name="PATIENT_DOSSIER_MEDICALE" Member="PATIENT" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="PATIENT" IsForeignKey="true" />
+      <Association Name="PERSONNEL_SOIGNANT_DOSSIER_MEDICALE" Member="PERSONNEL_SOIGNANT" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="PERSONNEL_SOIGNANT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ENTETE_STOCK" Member="ENTETE_STOCKs">
+    <Type Name="ENTETE_STOCK">
+      <Column Name="ID_AUTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DATE_ENTETE" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO_PIECE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="REF" Type="System.String" DbType="Char(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ENTETE_STOCK_LIGNE_DOC_STOCK" Member="LIGNE_DOC_STOCKs" ThisKey="REF" OtherKey="REF" Type="LIGNE_DOC_STOCK" />
+      <Association Name="DEPOT_MEDICAMENT_ENTETE_STOCK" Member="DEPOT_MEDICAMENT" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="DEPOT_MEDICAMENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EXAMENS" Member="EXAMENs">
+    <Type Name="EXAMEN">
+      <Column Name="CODE_EXAM" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TYPE_EXAM" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIX_EXAM" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="EXAMEN_LABORATOIRE" Member="LABORATOIREs" ThisKey="CODE_EXAM" OtherKey="CODE_EXAM" Type="LABORATOIRE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSPITALISER" Member="HOSPITALISERs">
+    <Type Name="HOSPITALISER">
+      <Column Name="CODE_CH" Type="System.String" DbType="Char(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NUMERO_DOSSIER" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DATE_ARRIVE" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_SORTIE" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="DOSSIER_MEDICALE_HOSPITALISER" Member="DOSSIER_MEDICALE" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="DOSSIER_MEDICALE" IsForeignKey="true" />
+      <Association Name="CHAMBRE_HOSPITALISER" Member="CHAMBRE" ThisKey="CODE_CH" OtherKey="CODE_CH" Type="CHAMBRE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LABORATOIRE" Member="LABORATOIREs">
+    <Type Name="LABORATOIRE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_EXAM" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO_DOSSIER" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_LB" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="DOSSIER_MEDICALE_LABORATOIRE" Member="DOSSIER_MEDICALE" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="DOSSIER_MEDICALE" IsForeignKey="true" />
+      <Association Name="EXAMEN_LABORATOIRE" Member="EXAMEN" ThisKey="CODE_EXAM" OtherKey="CODE_EXAM" Type="EXAMEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LIGNE_DOC_STOCK" Member="LIGNE_DOC_STOCKs">
+    <Type Name="LIGNE_DOC_STOCK">
+      <Column Name="NUMEROLIGNE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_MEC" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REF" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="QTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ENTETE_STOCK_LIGNE_DOC_STOCK" Member="ENTETE_STOCK" ThisKey="REF" OtherKey="REF" Type="ENTETE_STOCK" IsForeignKey="true" />
+      <Association Name="PHARMACIE_LIGNE_DOC_STOCK" Member="PHARMACIE" ThisKey="CODE_MEC" OtherKey="CODE_MEC" Type="PHARMACIE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MALADIE" Member="MALADIEs">
+    <Type Name="MALADIE">
+      <Column Name="CODE_MAL" Type="System.String" DbType="Char(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FAMILLE_MAL" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="SOUS_FAMILLE_MAL" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIX_TRAIT" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="MALADIE_TRAITEMENT" Member="TRAITEMENTs" ThisKey="CODE_MAL" OtherKey="CODE_MAL" Type="TRAITEMENT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ORDONANCES" Member="ORDONANCEs">
+    <Type Name="ORDONANCE">
+      <Column Name="CODE_ORD" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE_PERS" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_ORD" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DETAIL_ORD" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Association Name="ORDONANCE_DOSSIER_MEDICALE" Member="DOSSIER_MEDICALEs" ThisKey="CODE_ORD" OtherKey="CODE_ORD" Type="DOSSIER_MEDICALE" />
+      <Association Name="PERSONNEL_SOIGNANT_ORDONANCE" Member="PERSONNEL_SOIGNANT" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="PERSONNEL_SOIGNANT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PATIENT" Member="PATIENTs">
+    <Type Name="PATIENT">
+      <Column Name="CODE_PAT" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CIN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOM" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PRENOM" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="SEXE" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_NAISS" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LIEU_NAISS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PROFESSION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="QUARTIE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEPHONE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="GROUPE_SANGUN" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="PERSONNE_A_CONTACTER" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="PATIENT_CONSOMMER" Member="CONSOMMERs" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="CONSOMMER" />
+      <Association Name="PATIENT_CONSULTATION" Member="CONSULTATIONs" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="CONSULTATION" />
+      <Association Name="PATIENT_DOSSIER_MEDICALE" Member="DOSSIER_MEDICALEs" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="DOSSIER_MEDICALE" />
+      <Association Name="PATIENT_RDV" Member="RDVs" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="RDV" />
+      <Association Name="SOCIETE_PATIENT" Member="SOCIETE" ThisKey="CODE" OtherKey="CODE" Type="SOCIETE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RDV" Member="RDVs">
+    <Type Name="RDV">
+      <Column Name="ID_AUTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_PAT" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CODE_PERS" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_RDV" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HEURE_RDV" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="MODIF_RDV" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION_RDV" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Association Name="RDV_RDV" Member="RDV1" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="RDV" Cardinality="One" />
+      <Association Name="PATIENT_RDV" Member="PATIENT" ThisKey="CODE_PAT" OtherKey="CODE_PAT" Type="PATIENT" IsForeignKey="true" />
+      <Association Name="RDV_RDV" Member="RDV" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="RDV" IsForeignKey="true" />
+      <Association Name="PERSONNEL_SOIGNANT_RDV" Member="PERSONNEL_SOIGNANT" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="PERSONNEL_SOIGNANT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SERVICE" Member="SERVICEs">
+    <Type Name="SERVICE">
+      <Column Name="CODE_SERV" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="INTITULE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="SERVICE_PERSONNEL_SOIGNANT" Member="PERSONNEL_SOIGNANTs" ThisKey="CODE_SERV" OtherKey="CODE_SERV" Type="PERSONNEL_SOIGNANT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SOCIETE" Member="SOCIETEs">
+    <Type Name="SOCIETE">
+      <Column Name="CODE" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOM_SOC" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="ADRESSE_SOC" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="SOCIETE_ASSURANCE_SOCIETE" Member="ASSURANCE_SOCIETEs" ThisKey="CODE" OtherKey="CODE" Type="ASSURANCE_SOCIETE" />
+      <Association Name="SOCIETE_CATEGORIE_SOCIETE" Member="CATEGORIE_SOCIETEs" ThisKey="CODE" OtherKey="CODE" Type="CATEGORIE_SOCIETE" />
+      <Association Name="SOCIETE_PATIENT" Member="PATIENTs" ThisKey="CODE" OtherKey="CODE" Type="PATIENT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STOCK_MEDICAMENT" Member="STOCK_MEDICAMENTs">
+    <Type Name="STOCK_MEDICAMENT">
+      <Column Name="ID_AUTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODE_MEC" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DEPOT_MEDICAMENT_STOCK_MEDICAMENT" Member="DEPOT_MEDICAMENT" ThisKey="ID_AUTO" OtherKey="ID_AUTO" Type="DEPOT_MEDICAMENT" IsForeignKey="true" />
+      <Association Name="PHARMACIE_STOCK_MEDICAMENT" Member="PHARMACIE" ThisKey="CODE_MEC" OtherKey="CODE_MEC" Type="PHARMACIE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRAITEMENT" Member="TRAITEMENTs">
+    <Type Name="TRAITEMENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMERO_DOSSIER" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CODE_MAL" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_DEBUT" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_FIN" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ETAT_FIN" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Association Name="DOSSIER_MEDICALE_TRAITEMENT" Member="DOSSIER_MEDICALE" ThisKey="NUMERO_DOSSIER" OtherKey="NUMERO_DOSSIER" Type="DOSSIER_MEDICALE" IsForeignKey="true" />
+      <Association Name="MALADIE_TRAITEMENT" Member="MALADIE" ThisKey="CODE_MAL" OtherKey="CODE_MAL" Type="MALADIE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UTILISATEURS" Member="UTILISATEURs">
+    <Type Name="UTILISATEUR">
+      <Column Name="LOGIN" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE_PERS" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIVILEGE" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PERSONNEL_SOIGNANT_UTILISATEUR" Member="PERSONNEL_SOIGNANT" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="PERSONNEL_SOIGNANT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERSONNEL_SOIGNANT" Member="PERSONNEL_SOIGNANTs">
+    <Type Name="PERSONNEL_SOIGNANT">
+      <Column Name="CODE_PERS" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE_SERV" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NOM_PERS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PRENOM_PERS" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="SEXE" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="GRADE_PERS" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="FONCT" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEPHONE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="ADRESSE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_RECRUCT" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PHOTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PERSONNEL_SOIGNANT_VISITE" Member="VISITEs" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="VISITE" />
+      <Association Name="PERSONNEL_SOIGNANT_CONSULTATION" Member="CONSULTATIONs" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="CONSULTATION" />
+      <Association Name="PERSONNEL_SOIGNANT_DOSSIER_MEDICALE" Member="DOSSIER_MEDICALEs" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="DOSSIER_MEDICALE" />
+      <Association Name="PERSONNEL_SOIGNANT_ORDONANCE" Member="ORDONANCEs" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="ORDONANCE" />
+      <Association Name="PERSONNEL_SOIGNANT_RDV" Member="RDVs" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="RDV" />
+      <Association Name="PERSONNEL_SOIGNANT_UTILISATEUR" Member="UTILISATEURs" ThisKey="CODE_PERS" OtherKey="CODE_PERS" Type="UTILISATEUR" />
+      <Association Name="SERVICE_PERSONNEL_SOIGNANT" Member="SERVICE" ThisKey="CODE_SERV" OtherKey="CODE_SERV" Type="SERVICE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHARMACIE" Member="PHARMACIEs">
+    <Type Name="PHARMACIE">
+      <Column Name="CODE_MEC" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOM_MEC" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIX_MEC" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FAMILLE_M" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="FORME_M" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="POSOLOGU_M" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVATION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PHARMACIE_CONSOMMER" Member="CONSOMMERs" ThisKey="CODE_MEC" OtherKey="CODE_MEC" Type="CONSOMMER" />
+      <Association Name="PHARMACIE_LIGNE_DOC_STOCK" Member="LIGNE_DOC_STOCKs" ThisKey="CODE_MEC" OtherKey="CODE_MEC" Type="LIGNE_DOC_STOCK" />
+      <Association Name="PHARMACIE_STOCK_MEDICAMENT" Member="STOCK_MEDICAMENTs" ThisKey="CODE_MEC" OtherKey="CODE_MEC" Type="STOCK_MEDICAMENT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ACTE_PRESTATION" Member="ACTE_PRESTATIONs">
+    <Type Name="ACTE_PRESTATION">
+      <Column Name="CODE_PRES" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="INTUTLE_PRES" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="LETTRE_CLE" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIX_PRATITIQUER" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ACTE_PRESTATION_VISITE" Member="VISITEs" ThisKey="CODE_PRES" OtherKey="CODE_PRES" Type="VISITE" />
+      <Association Name="ACTE_PRESTATION_DETAIL_ASSURANCE_SOC" Member="DETAIL_ASSURANCE_SOCs" ThisKey="CODE_PRES" OtherKey="CODE_PRES" Type="DETAIL_ASSURANCE_SOC" />
+      <Association Name="ACTE_PRESTATION_GROUPE" Member="GROUPEs" ThisKey="CODE_PRES" OtherKey="CODE_PRES" Type="GROUPE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GROUPE" Member="GROUPEs">
+    <Type Name="GROUPE">
+      <Column Name="CODE_GR" Type="System.String" DbType="Char(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE_PRES" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="INTITULE" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ACTE_PRESTATION_GROUPE" Member="ACTE_PRESTATION" ThisKey="CODE_PRES" OtherKey="CODE_PRES" Type="ACTE_PRESTATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHAMBRE" Member="CHAMBREs">
+    <Type Name="CHAMBRE">
+      <Column Name="CODE_CH" Type="System.String" DbType="Char(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LOCALISATION" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="CATEGORIE_CH" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE_LIT" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIX_CH" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CHAMBRE_HOSPITALISER" Member="HOSPITALISERs" ThisKey="CODE_CH" OtherKey="CODE_CH" Type="HOSPITALISER" />
+    </Type>
+  </Table>
+</Database>

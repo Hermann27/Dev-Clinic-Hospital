@@ -1,0 +1,102 @@
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.AboutBox1.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Authentification.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Resources.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.vbproj.GenerateResource.Cache
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.MDIParent1.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.DemarrageLogiciel.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormSend.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Clinique.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_DossiersMedical.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Examens.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Hospitalisation.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Maladie.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulair_Laboratoire.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireChambre.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireConsultation.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireMedicament.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulairePatient.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireRDV.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireService.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireUtilisateur.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Traitement.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormUser.resources
+D:\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.exe
+D:\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.pdb
+D:\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.xml
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.exe
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.xml
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.pdb
+D:\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.exe.config
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_priseCharge.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormImpression.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormApercuImpression.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.IMPRESSION.resources
+D:\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.vbprojResolveAssemblyReference.cache
+D:\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.exe.config
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.exe
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.xml
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.pdb
+D:\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.exe
+D:\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.pdb
+D:\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.xml
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.vbprojResolveAssemblyReference.cache
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.AboutBox1.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Authentification.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.DemarrageLogiciel.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormApercuImpression.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormImpression.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormSend.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Clinique.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireChambre.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireConsultation.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireMedicament.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulairePatient.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireRDV.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireService.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireUtilisateur.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_priseCharge.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_DossiersMedical.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Examens.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Hospitalisation.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Maladie.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Traitement.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulair_Laboratoire.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormUser.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.IMPRESSION.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.MDIParent1.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Resources.resources
+D:\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.vbproj.GenerateResource.Cache
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.exe.config
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.exe
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.xml
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.pdb
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.exe
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.pdb
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\bin\Debug\CLINIQUE.xml
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.vbprojResolveAssemblyReference.cache
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.AboutBox1.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Authentification.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.DemarrageLogiciel.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormApercuImpression.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormImpression.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormSend.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Clinique.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireChambre.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireConsultation.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireMedicament.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulairePatient.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireRDV.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireService.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormulaireUtilisateur.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_priseCharge.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_DossiersMedical.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Examens.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Hospitalisation.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Maladie.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulaire_Traitement.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Formulair_Laboratoire.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.FormUser.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.IMPRESSION.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.MDIParent1.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.Resources.resources
+D:\Mes Projets\ma famille\CLINIQUE\CLINIQUE\obj\x86\Debug\CLINIQUE.vbproj.GenerateResource.Cache

@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E878A778-BDE0-4E6D-A738-E8EA7A321F36}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CLINIQUE.My.MyApplication</StartupObject>
+    <RootNamespace>CLINIQUE</RootNamespace>
+    <AssemblyName>CLINIQUE</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CLINIQUE.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CLINIQUE.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Synchronization, Version=1.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.Server, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.SqlServerCe, Version=2.0.0.0" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentification.Designer.vb">
+      <DependentUpon>Authentification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Authentification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cryptage.vb" />
+    <Compile Include="CrystalReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport4.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DC.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DC.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DemarrageLogiciel.Designer.vb">
+      <DependentUpon>DemarrageLogiciel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DemarrageLogiciel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dseport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dseport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dseport.vb">
+      <DependentUpon>dseport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormApercuImpression.Designer.vb">
+      <DependentUpon>FormApercuImpression.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormApercuImpression.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImpression.Designer.vb">
+      <DependentUpon>FormImpression.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImpression.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSend.Designer.vb">
+      <DependentUpon>FormSend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaire Clinique.Designer.vb">
+      <DependentUpon>Formulaire Clinique.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire Clinique.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireChambre.Designer.vb">
+      <DependentUpon>FormulaireChambre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireChambre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireConsultation.Designer.vb">
+      <DependentUpon>FormulaireConsultation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireConsultation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireMedicament.Designer.vb">
+      <DependentUpon>FormulaireMedicament.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireMedicament.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePatient.Designer.vb">
+      <DependentUpon>FormulairePatient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePatient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireRDV.Designer.vb">
+      <DependentUpon>FormulaireRDV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireRDV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireService.Designer.vb">
+      <DependentUpon>FormulaireService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireUtilisateur.Designer.vb">
+      <DependentUpon>FormulaireUtilisateur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireUtilisateur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaire_depot.Designer.vb">
+      <DependentUpon>Formulaire_depot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire_depot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaire_DossiersMedical.Designer.vb">
+      <DependentUpon>Formulaire_DossiersMedical.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire_DossiersMedical.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaire_Examens.Designer.vb">
+      <DependentUpon>Formulaire_Examens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire_Examens.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaire_Hospitalisation.Designer.vb">
+      <DependentUpon>Formulaire_Hospitalisation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire_Hospitalisation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaire_Maladie.Designer.vb">
+      <DependentUpon>Formulaire_Maladie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire_Maladie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaire_Traitement.Designer.vb">
+      <DependentUpon>Formulaire_Traitement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaire_Traitement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulair_Laboratoire.Designer.vb">
+      <DependentUpon>Formulair_Laboratoire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulair_Laboratoire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUser.Designer.vb">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IMPRESSION.Designer.vb">
+      <DependentUpon>IMPRESSION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IMPRESSION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentification.resx">
+      <DependentUpon>Authentification.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="DC.dbml.layout">
+      <DependentUpon>DC.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemarrageLogiciel.resx">
+      <DependentUpon>DemarrageLogiciel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApercuImpression.resx">
+      <DependentUpon>FormApercuImpression.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImpression.resx">
+      <DependentUpon>FormImpression.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSend.resx">
+      <DependentUpon>FormSend.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire Clinique.resx">
+      <DependentUpon>Formulaire Clinique.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireChambre.resx">
+      <DependentUpon>FormulaireChambre.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireConsultation.resx">
+      <DependentUpon>FormulaireConsultation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireMedicament.resx">
+      <DependentUpon>FormulaireMedicament.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePatient.resx">
+      <DependentUpon>FormulairePatient.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireRDV.resx">
+      <DependentUpon>FormulaireRDV.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireService.resx">
+      <DependentUpon>FormulaireService.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireUtilisateur.resx">
+      <DependentUpon>FormulaireUtilisateur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire_depot.resx">
+      <DependentUpon>Formulaire_depot.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire_DossiersMedical.resx">
+      <DependentUpon>Formulaire_DossiersMedical.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire_Examens.resx">
+      <DependentUpon>Formulaire_Examens.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire_Hospitalisation.resx">
+      <DependentUpon>Formulaire_Hospitalisation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire_Maladie.resx">
+      <DependentUpon>Formulaire_Maladie.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire_Traitement.resx">
+      <DependentUpon>Formulaire_Traitement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulair_Laboratoire.resx">
+      <DependentUpon>Formulair_Laboratoire.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMPRESSION.resx">
+      <DependentUpon>IMPRESSION.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DC.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DC.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dseport.xsc">
+      <DependentUpon>dseport.xsd</DependentUpon>
+    </None>
+    <None Include="dseport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dseport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dseport.xss">
+      <DependentUpon>dseport.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\14Folder_Opened.ico" />
+    <Content Include="images\WSS.ICO" />
+    <Content Include="Resources\10Desktop.ico" />
+    <Content Include="Resources\10Desktop_New1.ico" />
+    <Content Include="Resources\13Floppy_Drive.ico" />
+    <Content Include="Resources\13Floppy_Drive_New1.ico" />
+    <Content Include="Resources\14Folder_Opened.ico" />
+    <None Include="Resources\14Folder_Opened1.ico" />
+    <Content Include="Resources\14Folder_Opened_New1.ico" />
+    <Content Include="Resources\19Help.ico" />
+    <None Include="Resources\19Help1.ico" />
+    <Content Include="Resources\19Help_New1.ico" />
+    <Content Include="Resources\1Adminstrative.ico" />
+    <Content Include="Resources\1Adminstrative_New1.ico" />
+    <Content Include="Resources\272.png" />
+    <Content Include="Resources\357.png" />
+    <Content Include="Resources\358.png" />
+    <Content Include="Resources\3581.png" />
+    <Content Include="Resources\36Printer.ico" />
+    <None Include="Resources\36Printer1.ico" />
+    <Content Include="Resources\36Printer_New1.ico" />
+    <Content Include="Resources\39Recent_Docs.ico" />
+    <Content Include="Resources\39Recent_Docs_New1.ico" />
+    <Content Include="Resources\40Recycle-Empty.ico" />
+    <Content Include="Resources\40Recycle-Empty_New1.ico" />
+    <Content Include="Resources\41Recycle-Full.ico" />
+    <Content Include="Resources\45Search.ico" />
+    <Content Include="Resources\45Search_New1.ico" />
+    <None Include="Resources\45Search_New11.ico" />
+    <Content Include="Resources\486.png" />
+    <Content Include="Resources\49TXT_File.ico" />
+    <Content Include="Resources\51Winamp_Files.ico" />
+    <Content Include="Resources\51Winamp_Files_New1.ico" />
+    <Content Include="Resources\arriere.png" />
+    <Content Include="Resources\Autorun.ico" />
+    <Content Include="Resources\background.png" />
+    <Content Include="Resources\Bonjour.ico" />
+    <Content Include="Resources\Capture.JPG" />
+    <Content Include="Resources\CECamera.ico" />
+    <Content Include="Resources\CECamera_New1.ico" />
+    <Content Include="Resources\cedialer.ico" />
+    <Content Include="Resources\Copy of stock_people.png" />
+    <Content Include="Resources\Copy of system-search.png" />
+    <None Include="Resources\Copy of system-search1.png" />
+    <Content Include="Resources\Dexplore.ico" />
+    <Content Include="Resources\directx.ico" />
+    <None Include="Resources\directx1.ico" />
+    <Content Include="Resources\document-properties.png" />
+    <Content Include="Resources\document-save.png" />
+    <Content Include="Resources\edit-add.png" />
+    <Content Include="Resources\edit-redo.png" />
+    <Content Include="Resources\favicon.ico" />
+    <Content Include="Resources\GrooveIcon.ico" />
+    <None Include="Resources\GrooveIcon1.ico" />
+    <Content Include="Resources\gtk-undelete.png" />
+    <Content Include="Resources\gtk-undelete2.png" />
+    <Content Include="Resources\Installer.ico" />
+    <Content Include="Resources\Installer_New1.ico" />
+    <Content Include="Resources\Installer_New2.ico" />
+    <Content Include="Resources\keybdsip.ico" />
+    <Content Include="Resources\keybdsp2.ico" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\logo2.png" />
+    <Content Include="Resources\manual.ico" />
+    <Content Include="Resources\moi.png" />
+    <Content Include="Resources\moi2.png" />
+    <Content Include="Resources\MySharePoints.ico" />
+    <Content Include="Resources\MyWebExplorer.ico" />
+    <Content Include="Resources\netfol.ico" />
+    <Content Include="Resources\Obj_Source_HomePage.ico" />
+    <Content Include="Resources\Obj_Source_MTP.ico" />
+    <Content Include="Resources\OFFLINE.ICO" />
+    <Content Include="Resources\ONLINE.ICO" />
+    <Content Include="Resources\OnLineBusy.ico" />
+    <Content Include="Resources\OnLineIdle.ico" />
+    <Content Include="Resources\PictureViewer.ico" />
+    <Content Include="Resources\print_pref.ico" />
+    <None Include="Resources\print_pref1.ico" />
+    <Content Include="Resources\print_property.ico" />
+    <Content Include="Resources\print_queue.ico" />
+    <Content Include="Resources\RECL.ICO" />
+    <Content Include="Resources\red.ico" />
+    <Content Include="Resources\REMOTEL.ICO" />
+    <Content Include="Resources\ringtones.ico" />
+    <Content Include="Resources\scan_.ico" />
+    <Content Include="Resources\scan_property.ico" />
+    <Content Include="Resources\scan_property_New1.ico" />
+    <Content Include="Resources\scan_settings.ico" />
+    <Content Include="Resources\scan_settings_New1.ico" />
+    <None Include="Resources\scan_settings_New11.ico" />
+    <Content Include="Resources\scan__New1.ico" />
+    <Content Include="Resources\SCDCNCLL.ICO" />
+    <Content Include="Resources\SCDRESNL.ICO" />
+    <Content Include="Resources\SCDRESPL.ICO" />
+    <Content Include="Resources\SCDRESTL.ICO" />
+    <Content Include="Resources\SMSL.ICO" />
+    <Content Include="Resources\stock_channel.png" />
+    <Content Include="Resources\stock_mail-flag-for-followup-done.png" />
+    <Content Include="Resources\stock_new-meeting.png" />
+    <Content Include="Resources\stock_people.png" />
+    <Content Include="Resources\stock_search-and-replace.png" />
+    <Content Include="Resources\sync.ico" />
+    <Content Include="Resources\TMTV.ico" />
+    <Content Include="Resources\Untitled - 1.ico" />
+    <Content Include="Resources\Untitled - 1_New1.ico" />
+    <Content Include="Resources\Untitled - 3.ico" />
+    <Content Include="Resources\Untitled - 3_New1.ico" />
+    <Content Include="Resources\Warning.ico" />
+    <Content Include="Resources\WSS.ICO" />
+    <Content Include="Resources\__TemplateIcon.ico" />
+    <None Include="Resources\pigeons004.gif" />
+    <None Include="Resources\graphics-medical-medicine-0102341.gif" />
+    <None Include="Resources\Capture1.JPG" />
+    <None Include="Resources\graphics-medical-medicine-1744981.gif" />
+    <None Include="Resources\graphics-medical-medicine-4626301.gif" />
+    <None Include="Resources\doctor_1001.jpg" />
+    <None Include="Resources\criticalind_active.gif" />
+    <None Include="Resources\graphics-medical-medicine-8672482.gif" />
+    <None Include="Resources\th %282%291.jpg" />
+    <None Include="Resources\clipboard_100.jpg" />
+    <Content Include="Resources\Copy of xfce-system-lock.png" />
+    <Content Include="Resources\doctor_100.jpg" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\graphics-medical-medicine-010234.gif" />
+    <Content Include="Resources\graphics-medical-medicine-174498.gif" />
+    <Content Include="Resources\graphics-medical-medicine-374424.gif" />
+    <Content Include="Resources\graphics-medical-medicine-462630.gif" />
+    <Content Include="Resources\graphics-medical-medicine-826205.gif" />
+    <None Include="Resources\graphics-medical-medicine-9166771.gif" />
+    <None Include="Resources\graphics-medical-medicine-8262051.gif" />
+    <Content Include="Resources\graphics-medical-medicine-867248.gif" />
+    <Content Include="Resources\graphics-medical-medicine-8672481.gif" />
+    <Content Include="Resources\graphics-medical-medicine-916677.gif" />
+    <Content Include="Resources\suivant.gif" />
+    <None Include="Resources\suzanne-longval.jpg" />
+    <Content Include="Resources\symbole-0121.gif" />
+    <Content Include="Resources\symbole-01211.gif" />
+    <Content Include="Resources\th %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
